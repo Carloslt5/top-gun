@@ -1,0 +1,78 @@
+@use '../_vars.sass' as v
+
+.nav_menu 
+    align-items: center
+    background-color: v.$color-brown-200
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    padding: .8em
+    top: 0
+    width: 100%
+    z-index: 2
+
+.fixed 
+    position: sticky
+
+#open-btn 
+    color: v.$color-white
+    fill: v.$color-white
+    width: 1.5em
+
+#close-btn 
+    color: v.$color-white
+    fill: v.$color-white
+    position: absolute
+    right: .7em
+    top: .7em
+    width: 1.5em
+
+.logo 
+    width: 8em
+
+.menu 
+    background-color: v.$color-brown-200
+    height: 100%
+    overflow: hidden
+    position: absolute
+    right: 0
+    top: 0
+    transition: all .5s ease-in-out
+    width: 0%
+    z-index: 2
+
+.desplegable 
+    width: 100%
+
+.nav 
+    height: 100%
+    padding: 4em
+    &_ul 
+        align-items: center
+        display: flex
+        flex-flow: column nowrap
+        height: 100%
+        justify-content: space-evenly
+        list-style-type: none
+        margin: 0
+        padding: 0
+    &_li a 
+        color: v.$color-white
+        font-family: v.$tipo-principal
+        font-size: 2em
+        text-decoration: none
+        &:hover 
+            text-decoration: underline
+
+.wrap_rrss 
+    align-items: center
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+.rrss 
+    margin: .5em
+    transform: scale(1)
+    transition: all ease .5s
+    width: 1em
+    &:hover
+        transform: scale(1.1)

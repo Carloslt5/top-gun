@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script defer src="js/lightbox.js"></script>
+
 </head>
 
 <body>
@@ -50,18 +50,15 @@
     </div>
 
     <div class="container_title">
-        <h1>SINOPSIS</h1>
-        <div class="title_back">
-            <p>SINOPSIS</p>
-        </div>
+        <p class="container_title_p">SINOPSIS</p>
+        <h1 class="container_title_h1">SINOPSIS</h1>
     </div>
     <div class="wrap_container">
         <div class="container_sinopsis">
-            <div class="container_photo">
+            <div class="container_sinopsis_photo">
                     <img src="img/photo_sinopsis.jpg" alt="">
-
             </div>
-            <div class="sinopsis_text">
+            <div class="container_sinopsis_text">
                 <h2>TOP GUN: MAVERICK</h2>
                 <p>Después de más de treinta años de servicio como uno de los mejores aviadores de la Armada, Pete
                     "Maverick" Mitchell (Tom Cruise) se encuentra dónde siempre quiso estar, sobrepasando los límites
@@ -81,7 +78,7 @@
     </div>
 
     <div class="lightbox">
-        <button id="sinopsis-close">
+        <button id="lightbox_close">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                 <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
             </svg>
@@ -91,7 +88,7 @@
 
     <section>
         <div class="rating">
-            <h2>VALORACIONES</h2>
+            <h3>VALORACIONES</h3>
             <div class="rating_wrap">
                 <div class="rating_block">
                     <div class="rating_name">
@@ -143,12 +140,10 @@
     </section>
     </main>
     <footer>
-        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, optio facere repudiandae eaque ex
-            earum accusantium impedit rerum modi aut!</h4>
+        <h4 class="footer_h4">Proyecto realizado por Carlos Liao en  <a href="https://www.aulacreactiva.com/" target="_blank">Aulacreactiva</a></h4>
     </footer>
-
-
     <script src="js/menu-desplegable.js"></script>
+    <script defer src="js/lightbox.js"></script>
     <script src="js/menu-sticky.js"></script>
 </body>
 

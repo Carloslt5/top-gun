@@ -1,0 +1,42 @@
+@use '../_vars.sass' as v
+
+.gallery 
+    align-items: center
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    row-gap: .5em
+    &_photo 
+        border-radius: 0.625em
+        overflow: hidden
+        width: calc(25% - .5em)
+        position: relative
+        & h3 
+            font-family: v.$tipo-principal
+            color: v.$color-white
+    &_hover 
+        background: linear-gradient(0deg, rgba(241, 186, 76, 0.519) 0%, rgba(255, 255, 255, 0) 100%)
+        bottom: 0px
+        color: v.$color-white
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        opacity: 0
+        padding: .5em
+        position: absolute
+        transition: all .5s ease
+        width: 100%
+        height: 100%
+
+.gallery_photo:hover .gallery_hover 
+    opacity: 1
+
+@media screen and (max-width:768px) 
+    .gallery_photo 
+        width: calc(50% - .2em)
+    .gallery_hover
+        opacity: 1
+
+@media screen and (max-width:425px) 
+    .gallery_photo 
+        width: 100%

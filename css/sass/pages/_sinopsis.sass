@@ -1,0 +1,109 @@
+@use '../_vars.sass' as v
+
+.container_sinopsis 
+    align-items: center
+    display: flex
+    flex-direction: row
+    gap: 1em
+    justify-content: space-between
+    &_photo 
+        border-radius: 0.625em
+        overflow: hidden
+        width: 40%
+        height: 50vh
+    &_photo img 
+        cursor: pointer
+        height: 100%
+        object-fit: cover
+        transform: scale(1)
+        transition: all .5s ease
+        &:hover 
+            transform: scale(1.1)
+    &_text 
+        flex: 1
+
+.lightbox 
+    align-items: center
+    background: rgba(255, 255, 255, 0.8)
+    display: flex
+    flex-flow: column nowrap
+    height: 100%
+    justify-content: center
+    left: 0
+    opacity: 0
+    pointer-events: none
+    position: fixed
+    top: 0
+    transform: scale(1.1)
+    transition: all 0.5s ease
+    width: 100%
+    z-index: 2
+
+.lightbox.activo 
+    opacity: 1
+    pointer-events: auto
+    transform: scale(1)
+
+.lightbox .grande 
+    height: 80vh
+    transition: all 0.5s ease
+    width: 80vw
+
+.lightbox img 
+    object-fit: contain
+
+#lightbox_close 
+    background: none
+    border: none
+    cursor: pointer
+    margin-bottom: 1em
+    transform: scale(1)
+    transition: all .5s ease
+    width: 1em
+    &:hover 
+        transform: scale(1.2)
+    & svg 
+        fill: v.$color-black
+
+.rating 
+    display: flex
+    flex-direction: column
+    margin: auto
+    width: 90%
+    &_wrap 
+        display: flex
+        flex-direction: row
+        font-size: 0.75em
+        gap: 1em
+        overflow-x: auto
+        padding: 1em 0
+    &_block 
+        background-color: v.$color-white
+        border-radius: 0.625em
+        display: flex
+        flex-flow: column nowrap
+        justify-content: space-between
+        max-width: 30em
+        min-width: 18em
+        padding: 1em
+        width: 30%
+    & h3
+        color: v.$color-white
+        text-align: center
+    & h4 
+        color: v.$color-black
+
+
+@media screen and (max-width:768px)
+    .container_sinopsis 
+        flex-direction: column
+        &_photo 
+            width: 100%
+
+
+
+
+
+
+
+

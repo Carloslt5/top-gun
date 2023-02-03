@@ -1,0 +1,77 @@
+@forward '_reset.sass'
+@forward '_fonts.sass'
+@forward 'pages/_navbar.sass'
+@forward 'pages/_index.sass'
+@forward 'pages/_sinopsis'
+@forward 'pages/_trailer.sass'
+@forward 'pages/_galeria.sass'
+@forward 'pages/_footer.sass'
+
+@use '_vars.sass' as v
+
+body 
+    background-color: v.$color-brown-100
+
+section 
+    background-color: v.$color-brown-200
+    padding: 4em 0
+
+.wrap_container 
+    background-color: v.$color-white
+    border-radius: 0.625em
+    color: v.$color-black
+    margin: auto
+    margin-bottom: 5em
+    max-width: 112.5em
+    padding: .5em
+    text-align: left
+    width: 90%
+
+/* titulos */
+.container_title 
+    align-items: center
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    margin: 3em auto
+    text-align: center
+    width: 90%
+    &_h1 
+        color: v.$color-brown-300
+        font-family: v.$tipo-principal
+        font-size: 4em
+        margin: 0
+        position: absolute
+    &_p 
+        color: transparent
+        font-family: v.$tipo-principal
+        font-size: 8em
+        margin: 0
+        position: relative
+        -webkit-text-stroke: 1px v.$color-brown-300
+
+@media screen and (max-width:350px) 
+    .container_title_h1 
+        font-size: 3em
+    .container_title_p
+        font-size: 6em
+
+// botones
+.btn a 
+    border: 1px solid v.$color-brown-300
+    border-radius: 0.625em
+    color: v.$color-brown-300
+    display: block
+    font-family: v.$tipo-principal
+    font-size: 1.5em
+    margin-top: .5em
+    padding: .5em 2em
+    text-decoration: none
+    transition: all ease .5s
+    width: min-content
+    &:hover 
+        background-color: v.$color-brown-300
+        color: v.$color-white
+
+
+    
